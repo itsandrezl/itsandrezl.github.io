@@ -441,6 +441,52 @@ section { position: relative; z-index: 1; }
 .project-link::after { content: '→'; }
 .project-wip { opacity: 0.4; }
 
+.project-flagship {
+  grid-column: 1 / -1;
+  border: 1px solid var(--border2);
+}
+.project-flagship-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 5px 14px;
+  border: 1px solid var(--green);
+  border-radius: 999px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.project-flagship .project-title { font-size: 26px; max-width: 720px; }
+.project-flagship .project-desc { max-width: 720px; }
+.project-stats {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 32px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.project-stat { display: flex; flex-direction: column; gap: 4px; }
+.project-stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--bright);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.project-stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+@media (max-width: 900px) {
+  .project-stats { grid-template-columns: repeat(2, auto); }
+}
+
 /* ── CONTACT ── */
 #contact {
   border-top: 1px solid var(--border);
